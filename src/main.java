@@ -1,13 +1,17 @@
 import java.util.Hashtable;
 import java.util.Scanner;
 
+// MINHA
+import conta.conta;
+
 public class main {
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
+        conta conta = new conta();
         int escolha;
         boolean sair_menu = false;
 
-        System.out.println(CriarConta());
+        System.out.println(conta.getContas());
 
         do {
             MenuPrincipal();
@@ -27,30 +31,32 @@ public class main {
     }
     private static void MenuPrincipal(){
         System.out.println(
-        "******************************\n" +
-        "*            MENU            *\n" +
-        "*----------------------------*\n" +
-        "* 1 - Cadastrar-se           *\n" +
-        "* 2 - Criar conta correr     *\n" +
-        "* 3 - Criar conta poupança   *\n" +
-        "* 4 - Fazer deposito         *\n" +
-        "* 5 - Sacar                  *\n" +
-        "* 6 - Fazer transferência    *\n" +
-        "* 7 - Sair                   *\n" +
-        "******************************"
+        "********************************\n" +
+        "*              MENU            *\n" +
+        "*------------------------------*\n" +
+        "* 1 - Cadastrar-se             *\n" +
+        "* 2 - Cadastrar conta corrente *\n" +
+        "* 3 - Cadastrar conta poupança *\n" +
+        "* 4 - Fazer deposito           *\n" +
+        "* 5 - Sacar                    *\n" +
+        "* 6 - Fazer transferência      *\n" +
+        "* 7 - Sair                     *\n" +
+        "********************************"
         );
         System.out.println(">");
     }
 
-    private static Hashtable<String, String> CriarConta(){
-        Hashtable<String, String> teste = new Hashtable<String, String>();
+//    private static Hashtable<String, String> setCriarConta(String cpf, String nome){
+//        Hashtable<String, String> conta = new Hashtable<String, String>();
+//
+//        conta.put(cpf, nome);
+//
+//        return conta;
+//    }
 
-        teste.put("Um", "1");
-        teste.put("Dois", "2");
-        teste.put("Três", "3");
+//    private static void getCriarConta(){
+//
+//    }
 
-        return teste;
-
-    }
 
 }
