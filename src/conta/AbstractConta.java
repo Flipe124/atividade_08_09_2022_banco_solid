@@ -30,6 +30,6 @@ public abstract class AbstractConta {
     }
 
     public void setConta(int conta) {
-        AbstractConta.conta = conta;
+        this.conta = conta;
     }
 }

@@ -27,7 +27,18 @@ public class main {
                 case 2:
                     System.out.println("Criar conta corrente");
                     break;
-
+                case 3:
+                    System.out.println("Criar conta poupança");
+                    break;
+                case 4:
+                    System.out.println("Deposito");
+                    break;
+                case 5:
+                    System.out.println("Sacar");
+                    break;
+                case 6:
+                    System.out.println("Transferir");
+                    break;
                 case 7:
                     sair_menu = true;
                     break;
