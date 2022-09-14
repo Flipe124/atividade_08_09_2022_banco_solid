@@ -1,3 +1,4 @@
+
 import java.util.Hashtable;
 import java.util.Scanner;
 
@@ -6,12 +7,14 @@ import conta.conta;
 
 public class main {
     public static void main(String[] args){
+
         Scanner scan = new Scanner(System.in);
         conta conta = new conta();
+
         int escolha;
         boolean sair_menu = false;
 
-        System.out.println(conta.getContas());
+        System.out.println(conta);// TESTE
 
         do {
             MenuPrincipal();
@@ -19,17 +22,31 @@ public class main {
 
             switch (escolha){
                 case 1:
-                    System.out.println("Cadastrar-se");
+                    scan.nextLine();// PREVENIR ERRO;
+
+                    System.out.println("Informe seu CPF:");
+                    conta.setCpf(scan.nextLine());
+
+                    System.out.println("Informe seu nome:");
+                    conta.setNome(scan.nextLine());
+
+                    System.out.println(conta.getCpf());
                     break;
                 case 2:
                     System.out.println("Criar conta corrente");
+                    break;
+
+                case 7:
+                    sair_menu = true;
                     break;
                 default:
                     System.out.println("Opção inválida!");
             }
         } while (sair_menu == false);
+        System.out.println("Saiu.");
     }
-    private static void MenuPrincipal(){
+
+    public static void MenuPrincipal() {
         System.out.println(
         "********************************\n" +
         "*              MENU            *\n" +
@@ -43,20 +60,5 @@ public class main {
         "* 7 - Sair                     *\n" +
         "********************************"
         );
-        System.out.println(">");
     }
-
-//    private static Hashtable<String, String> setCriarConta(String cpf, String nome){
-//        Hashtable<String, String> conta = new Hashtable<String, String>();
-//
-//        conta.put(cpf, nome);
-//
-//        return conta;
-//    }
-
-//    private static void getCriarConta(){
-//
-//    }
-
-
 }

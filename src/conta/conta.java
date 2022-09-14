@@ -3,22 +3,23 @@ package conta;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class conta {
-    private Hashtable<String, String> contas = new Hashtable<String, String>();// CPF/NOME
+public  class conta {
+    private String nome;
+    private String cpf;
 
-//    public Hashtable<String, String> getContas() {
-//        return contas;
-//    }
-    public void getContas() {
-        for(Map.Entry<Integer, String> entry : contas ){
-            System.out.println( entry.getKey() + "->" + entry.getValue() );
-        }
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setContas(Hashtable<String, String> contas) {
-        contas.put("Teste","1");
-        contas.put("Teste","2");
-        contas.put("Teste","3");
-        this.contas = contas;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getNome() {
+        return nome;
     }
 }
